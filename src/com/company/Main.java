@@ -1,5 +1,6 @@
 package com.company;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -9,16 +10,14 @@ import java.util.stream.Stream;
 public class Main {
 
     public static void main(String[] args) {
-        sideEffects();
+        // Folositi exemplele aici
     }
 
     private static void sideEffects() {
-        // int val = 0;
-        Integer[] val = new Integer[] {0};
-        Arrays.asList(1, 2, 3, 4, 5, 6).stream().forEach(i -> {
-            // val++;
-            val[0]++;
-        });
+        // Sir cu un singur element care contine valoarea ceruta, incercati sa transformati sirul intr-un simplu
+        // Integer, si vedeti ce se intampla
+        Integer[] val = new Integer[]{0};
+        Arrays.asList(1, 2, 3, 4, 5, 6).stream().forEach(i -> val[0]++);
         System.out.println(val[0]);
 
     }
@@ -65,6 +64,7 @@ public class Main {
     }
 
     private static <T> void printList(List<T> list) {
+        // val++;
         System.out.print("[");
         list.stream().forEach(System.out::println);
         System.out.print("]");
